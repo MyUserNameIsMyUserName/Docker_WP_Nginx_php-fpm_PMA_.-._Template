@@ -104,4 +104,14 @@ dist
 .tern-port
 
 
-!._addon_files_.
+#.env*
+.idea/
+_addon_files/certs/
+_addon_files/certs-data/
+_addon_files/logs/
+#_config/nginx/
+_mysql/
+PUBLIC/
+!PUBLIC/wp-content/themes/index.php
+!.env_example
+!nginx/default*
