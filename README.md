@@ -1,2 +1,2 @@
-# Docker_WP_Nginx_php-fpm_PMA_.-._Template
+# WDNPMP - WordPress/Docker/Nginx/PHP-FPM/MySQL/phpMyAdmin
 Docker WordPress Nginx Php-FPM phpMyAdmin 
