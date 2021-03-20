@@ -6,13 +6,13 @@ services:
         image: nginx:latest
         mem_limit: 512m
         mem_reservation: 128M
-        cpus: 0.5
+        cpus: 2
         ports:
             - "80:80"
         restart: always
         volumes:
-            - ./omega/public:/omega/public
-            - ./omega/site.conf:/etc/nginx/conf.d/default.conf
+            - ./public:/public
+            - ./nginx/site.conf:/etc/nginx/conf.d/default.conf
         networks:
             - og-network
         depends_on: 
@@ -24,9 +24,9 @@ services:
         image: php:fpm
         mem_limit: 512m
         mem_reservation: 128M
-        cpus: 1
+        cpus: 2
         volumes:
-            - ./omega/public:/omega/public
+            - ./public:/public
         networks:
             - og-network
         environment:
