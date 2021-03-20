@@ -1,0 +1,21 @@
+{
+  "name": "WP_DNPMP",
+  "version": "1.0.0",
+  "description": "Docker WordPress Nginx Php-FPM phpMyAdmin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "_build_containers": "docker-compose up -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyUserNameIsMyUserName/Docker_WP_Nginx_php-fpm_PMA_.-._Template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyUserNameIsMyUserName/Docker_WP_Nginx_php-fpm_PMA_.-._Template/issues"
+  },
+  "homepage": "https://github.com/MyUserNameIsMyUserName/Docker_WP_Nginx_php-fpm_PMA_.-._Template#readme"
+}
