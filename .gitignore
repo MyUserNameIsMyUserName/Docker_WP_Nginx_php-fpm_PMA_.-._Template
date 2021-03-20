@@ -104,7 +104,7 @@ dist
 .tern-port
 
 
-#.env*
+!.env*
 .idea/
 _addon_files/certs/
 _addon_files/certs-data/
