@@ -1,13 +1,13 @@
 {
   "name": "WP_DNPMP",
   "version": "1.0.0",
-  "description": "Docker WordPress Nginx Php-FPM phpMyAdmin",
+  "description": "Docker WordPress Nginx Php-FPM mySql phpMyAdmin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "_build_containers": "docker-compose up -d",
     "bc_": "npm run _build_containers",
-    "_stop_and_clean": "bash _addon_files/stop_and_clean.sh",
+    "_stop_and_clean": "start bash -c \" bash ./addon_files/stop_and_clean.sh \" ",
     "sc_": "npm run _stop_and_clean"
   },
   "repository": {
