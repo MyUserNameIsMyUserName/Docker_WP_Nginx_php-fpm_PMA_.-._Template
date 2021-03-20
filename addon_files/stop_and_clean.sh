@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+echo $PWD
 # Stop running containers and remove related directories
 read -p "Do you really want to stop and remove EVERYTHING (y/n)? " answer
 case ${answer:0:1} in
