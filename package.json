@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": " echo \"Error: no test specified\" && exit 1 ",
-    "_create_folders": " bash -c \" mkdir -p addon_files/certs/ addon_files/certs-data/ addon_files/logs/nginx/ mysql/ PUBLIC/ && exit 1 \" ",
+    "_create_folders": " start bash -c \" cd addon_files ; rm -rf ./certs ; rm -rf ./certs-data ; rm -rf ./logs ; cd .. ; rm -rf  ./mysql ; rm -rf ./PUBLIC ; exit 1 \" ",
     "_build_containers": " docker-compose up -d ",
     "_stop_and_clean": " bash ./addon_files/stop_and_clean.sh ",
     "_build": " bash -c \" npm run _create_folders && exit 1 \" && bash -c \"npm run _build_containers && exit 1 \" ",
