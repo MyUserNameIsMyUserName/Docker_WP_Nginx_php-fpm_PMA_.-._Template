@@ -106,12 +106,12 @@ dist
 
 !.env*
 .idea/
-_addon_files/certs/*
-_addon_files/certs-data/*
-_addon_files/logs/*
-!_addon_files/certs/.gitkeep
-!_addon_files/certs-data/.gitkeep
-!_addon_files/logs/.gitkeep
+addon_files/certs/*
+addon_files/certs-data/*
+addon_files/logs/*
+!addon_files/certs/.gitkeep
+!addon_files/certs-data/.gitkeep
+!addon_files/logs/.gitkeep
 #_config/nginx/
 !.env_example
 !nginx/default*
