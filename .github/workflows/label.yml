@@ -17,3 +17,9 @@ jobs:
     - uses: actions/labeler@v2
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
+
+
+
+    - name: Sysdig CIS Dockerfile Benchmark
+      uses: sysdiglabs/benchmark-dockerfile@v1.0.0
