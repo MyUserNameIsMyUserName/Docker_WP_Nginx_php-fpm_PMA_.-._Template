@@ -12,16 +12,16 @@ services:
       - WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST:-mysql}
       - WORDPRESS_DB_USER=${WORDPRESS_DB_USER:-root}
       - WORDPRESS_DB_PASSWORD=${WORDPRESS_DB_PASSWORD:-password}
-    mem_limit: 512m
-    mem_reservation: 128M
-    cpus: 2
+    mem_limit: 1024m
+    mem_reservation: 256M
+    cpus: 4
     depends_on:
       - mysql
     restart: always
 
   mysql:
     image: mariadb:${MARIADB_VERSION:-latest}
-    container_name: mysql
+    container_name: ${MYSQL_HOST}
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
@@ -30,12 +30,14 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
       - MYSQL_DATABASE=${MYSQL_DATABASE:-wordpress}
     restart: always
+    ports:
+      - 8000:3306
 
   nginx:
     image: nginx:${NGINX_VERSION:-latest}
     container_name: nginx
-    mem_limit: 512m
-    mem_reservation: 128M
+    mem_limit: 1536m
+    mem_reservation: 256M
     cpus: 2
     ports:
       - "80:80"
@@ -50,10 +52,17 @@ services:
       - wordpress
     restart: always
 
-  adminer:
-    image: adminer
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
     restart: always
-    links:
+    depends_on:
       - mysql
     ports:
-      - 8080:8080
+      - 8080:80
+    environment:
+      PMA_HOST: ${MYSQL_HOST}
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    links:
+      - mysql
