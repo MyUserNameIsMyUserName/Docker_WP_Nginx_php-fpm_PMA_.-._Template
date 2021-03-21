@@ -42,10 +42,10 @@ services:
       - "443:443"
     volumes:
       - ${NGINX_CONF_DIR:-./_config/nginx}:/etc/nginx/conf.d
-      - ${NGINX_LOG_DIR:-./_.addon_files._/logs/nginx}:/var/log/nginx
+      - ${NGINX_LOG_DIR:-./addon_files/logs/nginx}:/var/log/nginx
       - ${WORDPRESS_DATA_DIR:-./PUBLIC}:/var/www/html
-      - ${SSL_CERTS_DIR:-./_.addon_files._/certs}:/etc/letsencrypt
-      - ${SSL_CERTS_DATA_DIR:-./_.addon_files._/certs-data}:/data/letsencrypt
+      - ${SSL_CERTS_DIR:-./addon_files/certs}:/etc/letsencrypt
+      - ${SSL_CERTS_DATA_DIR:-./addon_files/certs-data}:/data/letsencrypt
     depends_on:
       - wordpress
     restart: always
