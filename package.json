@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": " echo \"Error: no test specified\" && exit 1 ",
-    "_create_folders": " mkdir addon_files/certs addon_files/certs-data addon_files/logs mysql PUBLIC",
-    "_build_containers": " docker-compose up -d && echo ",
-    "_stop_and_clean": " bash ./addon_files/stop_and_clean.sh  && echo \"[>   STOPPED AND CLEANED -:- DONE  <] \" && exit 1 ",
-    "_build": " npm run _create_folders && npm run _build_containers && echo \"[>   BUILD -:- DONE  <] \" && exit 1 ",
+    "_create_folders": " bash -c \" cd addon_files ; mkdir certs ; mkdir certs-data ; mkdir logs ; cd .. ; mkdir  mysql ; mkdir PUBLIC ; \" ",
+    "_build_containers": " docker-compose up -d ",
+    "_stop_and_clean": " bash ./addon_files/stop_and_clean.sh ",
+    "_build": " bash -c \" npm run _create_folders ; npm run _build_containers \" ",
     "bc_": " npm run _build_containers ",
     "sc_": " npm run _stop_and_clean ",
     "b__": " npm run _build "
