@@ -115,6 +115,7 @@ _addon_files/logs/*
 #_config/nginx/
 !.env_example
 !nginx/default*
+mysql/
 _mysql/
 !_mysql/.gitkeep
 PUBLIC/

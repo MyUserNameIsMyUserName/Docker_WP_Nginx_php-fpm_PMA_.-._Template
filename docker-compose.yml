@@ -4,7 +4,7 @@ services:
     image: wordpress:${WORDPRESS_VERSION:-php7.4-fpm}
     container_name: wordpress
     volumes:
-      - ./_config/php/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
+      - ./config/php/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./PUBLIC:/var/www/html
     environment:
       - WORDPRESS_DB_NAME=${WORDPRESS_DB_NAME:-wordpress}
@@ -23,7 +23,7 @@ services:
     image: mariadb:${MARIADB_VERSION:-latest}
     container_name: mysql
     volumes:
-      - ./_mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
       - MYSQL_USER=${MYSQL_USER:-root}
@@ -41,7 +41,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ${NGINX_CONF_DIR:-./_config/nginx}:/etc/nginx/conf.d
+      - ${NGINX_CONF_DIR:-./config/nginx}:/etc/nginx/conf.d
       - ${NGINX_LOG_DIR:-./addon_files/logs/nginx}:/var/log/nginx
       - ${WORDPRESS_DATA_DIR:-./PUBLIC}:/var/www/html
       - ${SSL_CERTS_DIR:-./addon_files/certs}:/etc/letsencrypt
