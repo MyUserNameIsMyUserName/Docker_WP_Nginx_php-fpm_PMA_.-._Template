@@ -1,5 +1,7 @@
 # WDNPMP-WP_Container_Template   
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0fc49ea5c190409fb75eec070a043d61)](https://app.codacy.com/gh/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template?utm_source=github.com&utm_medium=referral&utm_content=MyUserNameIsMyUserName/WDNPMP-WP_Container_Template&utm_campaign=Badge_Grade_Settings)
+
 Easy-build using only 1 command: 
     
     npm run b__  
