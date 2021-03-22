@@ -1,8 +1,6 @@
 # WDNPMP-WP_Container_Template   
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0fc49ea5c190409fb75eec070a043d61)](https://app.codacy.com/gh/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template?utm_source=github.com&utm_medium=referral&utm_content=MyUserNameIsMyUserName/WDNPMP-WP_Container_Template&utm_campaign=Badge_Grade_Settings)
-[![SL Scan](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/shiftleft-analysis.yml/badge.svg)](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/shiftleft-analysis.yml)  
-[![SAST Security](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/sast-scan.yml/badge.svg?branch=main_index)](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/sast-scan.yml)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0fc49ea5c190409fb75eec070a043d61)](https://app.codacy.com/gh/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template?utm_source=github.com&utm_medium=referral&utm_content=MyUserNameIsMyUserName/WDNPMP-WP_Container_Template&utm_campaign=Badge_Grade_Settings) . [![SL Scan](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/shiftleft-analysis.yml/badge.svg)](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/shiftleft-analysis.yml) . [![SAST Security](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/sast-scan.yml/badge.svg?branch=main_index)](https://github.com/MyUserNameIsMyUserName/WDNPMP-WP_Container_Template/actions/workflows/sast-scan.yml)
 
 Easy-build using only 1 command: 
     
