@@ -24,6 +24,7 @@ services:
     container_name: ${PROJECT_NAME}_mysql
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./addon_files/backup:/backup
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-password}
       - MYSQL_USER=${MYSQL_USER:-root}
@@ -67,20 +68,21 @@ services:
     links:
       - mysql
 
-  dbBackup:
+  mysql-cron-backup:
     container_name: ${PROJECT_NAME}_bckup
     image: fradelg/mysql-cron-backup
     depends_on:
       - mysql
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./addon_files/backup:/backup
     environment:
       - MYSQL_USER=root
       - MYSQL_PASS=password
-      - MYSQL_DB=wordpress
       - CRON_TIME=0 0 * * *
       - MYSQL_NAME=${PROJECT_NAME}_mysql
       - MYSQL_PORT=${MYSQL_PORT}
       - TIMEOUT=10s
       - INIT_BACKUP=1
+      - MAX_BACKUPS=15
+      - GZIP_LEVEL=9
