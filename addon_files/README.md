@@ -72,3 +72,8 @@
             "_o_": " bash -c \" npm run ysc_ ; npm run b__ \" "
 
 ---
+
+
+
+REFERENCE:
+  https://github.com/fradelg/docker-mysql-cron-backup
