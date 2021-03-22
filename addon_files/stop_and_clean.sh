@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-echo $PWD
+#echo $PWD
 # Stop running containers and remove related directories
 read -p "Do you really want to stop and remove EVERYTHING (y/n)? " answer
 case ${answer:0:1} in
@@ -10,10 +10,10 @@ case ${answer:0:1} in
         docker-compose rm -f
         echo "INFO: Setting file permissions to that of the user"
         docker run --rm \
-          -v $(pwd):/clean \
-          -e UID=$(id -u) \
-          -e GID=$(id -g) \
-          nginx:latest /bin/bash -c 'chown -R $UID:$GID /clean'
+        -v $(pwd):/clean \
+        -e UID=$(id -u) \
+        -e GID=$(id -g) \
+        nginx:latest /bin/bash -c 'chown -R $UID:$GID /clean'
         echo "INFO: Pruning unused docker volumes"
         docker volume prune -f
         echo "INFO: Pruning unused docker networks"
